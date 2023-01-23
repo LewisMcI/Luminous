@@ -1,0 +1,4 @@
+repository "Luminous@LewisMcI@cloud"
+  path "/"
+    br "/main"
+    co "/main"

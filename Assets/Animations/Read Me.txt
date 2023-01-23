@@ -1,0 +1,34 @@
+Can't Sync Up the Unity Project.
+
+This how to implement the Animations. 
+
+
+To adjust size, set Scale Factor in the Model Tab, when clicking on the file in Unity.
+
+Replace the Object that is the player with the File "ModelWithRig"
+
+
+
+
+Add an Animator component to the "ModelRigged" in the scene.
+
+Select the Animator Controller in the Controller section of the Animator component.
+
+
+^ Reference the Animator in the playerscript by referincing the object it is attached to. Example Script:
+
+
+public Gameobject modelWithRig;
+Animator Playeranim
+
+Start()
+{
+Playeranim = modelWithRig.GetComponent<Animator>();
+
+}
+
+
+Call Playeranim.SetBool("isWalking", true) if you want the player to start walking
+Call Playeranim.SetBool("isWalking", false) if you want the player to stop walking
+
+Transitions and such is all done. It's just about getting it into Unity which I somehow can't use with Source Control
